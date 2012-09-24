@@ -12,8 +12,8 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-
+  resources :sessions,   only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   
 
 
